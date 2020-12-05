@@ -1,31 +1,18 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch08-1", "ch08-1\ch08-1.vcxproj", "{A8D0F7C3-3B3B-4344-81E5-42B45B546D72}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A8D0F7C3-3B3B-4344-81E5-42B45B546D72}.Debug|x64.ActiveCfg = Debug|x64
-		{A8D0F7C3-3B3B-4344-81E5-42B45B546D72}.Debug|x64.Build.0 = Debug|x64
-		{A8D0F7C3-3B3B-4344-81E5-42B45B546D72}.Debug|x86.ActiveCfg = Debug|Win32
-		{A8D0F7C3-3B3B-4344-81E5-42B45B546D72}.Debug|x86.Build.0 = Debug|Win32
-		{A8D0F7C3-3B3B-4344-81E5-42B45B546D72}.Release|x64.ActiveCfg = Release|x64
-		{A8D0F7C3-3B3B-4344-81E5-42B45B546D72}.Release|x64.Build.0 = Release|x64
-		{A8D0F7C3-3B3B-4344-81E5-42B45B546D72}.Release|x86.ActiveCfg = Release|Win32
-		{A8D0F7C3-3B3B-4344-81E5-42B45B546D72}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6025517D-9746-416B-A600-3259F5C54D1C}
-	EndGlobalSection
-EndGlobal
+//file: address.c
+#define _ CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+int main(void)
+{
+	int input;
+
+	printf("정수 입력:");
+	scanf("%d", &input);
+	printf("입력값: &d\n", input);
+	printf("주소값: %u(10진수), %p(16진수)\n", (int)&input, &input);
+	printf("주소값: %d(10진수), %#x(16진수)\n", (unsigned)&input,
+		(int)&input);
+	printf("주소값 크기: %d\n", sizeof(&input));
+
+	return 0;
+}
