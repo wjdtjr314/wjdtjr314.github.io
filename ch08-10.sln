@@ -1,31 +1,19 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch08-10", "ch08-10\ch08-10.vcxproj", "{FAF04408-6727-4206-ADA0-A8941A748B80}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FAF04408-6727-4206-ADA0-A8941A748B80}.Debug|x64.ActiveCfg = Debug|x64
-		{FAF04408-6727-4206-ADA0-A8941A748B80}.Debug|x64.Build.0 = Debug|x64
-		{FAF04408-6727-4206-ADA0-A8941A748B80}.Debug|x86.ActiveCfg = Debug|Win32
-		{FAF04408-6727-4206-ADA0-A8941A748B80}.Debug|x86.Build.0 = Debug|Win32
-		{FAF04408-6727-4206-ADA0-A8941A748B80}.Release|x64.ActiveCfg = Release|x64
-		{FAF04408-6727-4206-ADA0-A8941A748B80}.Release|x64.Build.0 = Release|x64
-		{FAF04408-6727-4206-ADA0-A8941A748B80}.Release|x86.ActiveCfg = Release|Win32
-		{FAF04408-6727-4206-ADA0-A8941A748B80}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7131C286-427A-41D6-A07A-8CDDC4C7EC55}
-	EndGlobalSection
-EndGlobal
+/* constptr.c */
+#include <stdio.h>
+
+int main()
+{
+	int i = 10, j = 20;
+const int* p = &i;
+
+p = &j;
+printf("%d\n", *p);
+
+double d = 7.8, e = 2.7;
+double* const pd = &d;
+*pd = 4.4;
+printf("%f\n", *pd);
+
+return 0;
+
+}
