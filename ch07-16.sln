@@ -1,31 +1,25 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch07-16", "ch07-16\ch07-16.vcxproj", "{201205B8-B4C4-45E8-AB49-CB660371F806}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{201205B8-B4C4-45E8-AB49-CB660371F806}.Debug|x64.ActiveCfg = Debug|x64
-		{201205B8-B4C4-45E8-AB49-CB660371F806}.Debug|x64.Build.0 = Debug|x64
-		{201205B8-B4C4-45E8-AB49-CB660371F806}.Debug|x86.ActiveCfg = Debug|Win32
-		{201205B8-B4C4-45E8-AB49-CB660371F806}.Debug|x86.Build.0 = Debug|Win32
-		{201205B8-B4C4-45E8-AB49-CB660371F806}.Release|x64.ActiveCfg = Release|x64
-		{201205B8-B4C4-45E8-AB49-CB660371F806}.Release|x64.Build.0 = Release|x64
-		{201205B8-B4C4-45E8-AB49-CB660371F806}.Release|x86.ActiveCfg = Release|Win32
-		{201205B8-B4C4-45E8-AB49-CB660371F806}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BA45328B-514C-42E8-B7E3-958C29D29AF0}
-	EndGlobalSection
-EndGlobal
+//file: menu.c
+#define_CRT_SECURE_NO_WARNINGS
+
+#include <studio.h>
+
+int main(void)
+{
+	int input;
+
+	do {
+		printf("\t [1] 한식\n";)
+			printf("\t [2] 한식\n";)
+			printf("\t [3] 한식\n";)
+			printf("\t [4] 한식\n";)
+			printf("메뉴 번호 선택 후 [Enter] :");
+		scanf("%d", &input);
+		printf("선택 메뉴 %d\n", input);
+		if (input <= 4 && input >= 1)
+			break;
+
+	} while (1);
+
+	return 0;
+
+}
