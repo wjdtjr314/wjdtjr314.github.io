@@ -1,31 +1,21 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch07-14", "ch07-14\ch07-14.vcxproj", "{38A8CE80-2C91-43D7-A755-E1F6B407AD36}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{38A8CE80-2C91-43D7-A755-E1F6B407AD36}.Debug|x64.ActiveCfg = Debug|x64
-		{38A8CE80-2C91-43D7-A755-E1F6B407AD36}.Debug|x64.Build.0 = Debug|x64
-		{38A8CE80-2C91-43D7-A755-E1F6B407AD36}.Debug|x86.ActiveCfg = Debug|Win32
-		{38A8CE80-2C91-43D7-A755-E1F6B407AD36}.Debug|x86.Build.0 = Debug|Win32
-		{38A8CE80-2C91-43D7-A755-E1F6B407AD36}.Release|x64.ActiveCfg = Release|x64
-		{38A8CE80-2C91-43D7-A755-E1F6B407AD36}.Release|x64.Build.0 = Release|x64
-		{38A8CE80-2C91-43D7-A755-E1F6B407AD36}.Release|x86.ActiveCfg = Release|Win32
-		{38A8CE80-2C91-43D7-A755-E1F6B407AD36}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6DB6BC16-8AE1-4F71-9ADD-86D183A6BEBF}
-	EndGlobalSection
-EndGlobal
+//file: break.c
+#define_CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+
+int main(void)
+{
+	int input;
+
+	while (1)
+	{
+		printf("정수[음수, 0(종료), 양수]를 입력후 [Enter] :");
+		sacnf("%d", &input);
+		printf("입력한 정수 %d\n", input);
+		if (input == 0)
+			break;
+	}
+	puts("종료합니다.");
+
+	return 0;
+}
