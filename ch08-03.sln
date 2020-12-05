@@ -1,31 +1,15 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch08-3", "ch08-3\ch08-3.vcxproj", "{593B0E60-7060-481F-992D-C75390EB2497}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{593B0E60-7060-481F-992D-C75390EB2497}.Debug|x64.ActiveCfg = Debug|x64
-		{593B0E60-7060-481F-992D-C75390EB2497}.Debug|x64.Build.0 = Debug|x64
-		{593B0E60-7060-481F-992D-C75390EB2497}.Debug|x86.ActiveCfg = Debug|Win32
-		{593B0E60-7060-481F-992D-C75390EB2497}.Debug|x86.Build.0 = Debug|Win32
-		{593B0E60-7060-481F-992D-C75390EB2497}.Release|x64.ActiveCfg = Release|x64
-		{593B0E60-7060-481F-992D-C75390EB2497}.Release|x64.Build.0 = Release|x64
-		{593B0E60-7060-481F-992D-C75390EB2497}.Release|x86.ActiveCfg = Release|Win32
-		{593B0E60-7060-481F-992D-C75390EB2497}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1829D9BB-7DC6-486E-A93D-86CA490DAF28}
-	EndGlobalSection
-EndGlobal
+// file: nullpointer.c
+#include <stdio.h>
+
+int main(void)
+{
+	int *ptr1, *ptr2, data = 10;
+	ptr1 = NULL;
+
+	printf("%p\n", ptr1);
+	//printf("%p\n", ptr2);
+	printf("%d\n", data);
+
+	return 0;
+	
+}
