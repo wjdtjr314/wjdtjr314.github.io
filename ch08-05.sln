@@ -1,31 +1,16 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch08-05", "ch08-05\ch08-05.vcxproj", "{7758404B-905D-4050-A40F-1F4F0A5BDEA3}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7758404B-905D-4050-A40F-1F4F0A5BDEA3}.Debug|x64.ActiveCfg = Debug|x64
-		{7758404B-905D-4050-A40F-1F4F0A5BDEA3}.Debug|x64.Build.0 = Debug|x64
-		{7758404B-905D-4050-A40F-1F4F0A5BDEA3}.Debug|x86.ActiveCfg = Debug|Win32
-		{7758404B-905D-4050-A40F-1F4F0A5BDEA3}.Debug|x86.Build.0 = Debug|Win32
-		{7758404B-905D-4050-A40F-1F4F0A5BDEA3}.Release|x64.ActiveCfg = Release|x64
-		{7758404B-905D-4050-A40F-1F4F0A5BDEA3}.Release|x64.Build.0 = Release|x64
-		{7758404B-905D-4050-A40F-1F4F0A5BDEA3}.Release|x86.ActiveCfg = Release|Win32
-		{7758404B-905D-4050-A40F-1F4F0A5BDEA3}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C2FE1789-F7D3-4F2D-9AF5-DCF3D68F7C74}
-	EndGlobalSection
-EndGlobal
+//file:calcptr.c
+#include <stdio.h>
+
+int main(void)
+{
+	char* pc = (char*)100;
+	int* pi = (int*)100;
+	double *pd = (double*)100;
+	pd = 100;
+
+	printf("%u %u %u\n", (int)(pc - 1), (int)pc, (int)(pc + 1));
+	printf("%u %u %u\n", (int)(pi - 1), (int)pi, (int)(pi + 1));
+	printf("%u %u %u\n", (int)(pd - 1), (int)pd, (int)(pd + 1));
+
+	return 0;
+}
