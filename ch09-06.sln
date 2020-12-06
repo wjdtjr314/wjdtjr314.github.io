@@ -1,31 +1,38 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch09-06", "ch09-06\ch09-06.vcxproj", "{187EC404-57B5-43CF-A0DC-6ADE090891FC}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{187EC404-57B5-43CF-A0DC-6ADE090891FC}.Debug|x64.ActiveCfg = Debug|x64
-		{187EC404-57B5-43CF-A0DC-6ADE090891FC}.Debug|x64.Build.0 = Debug|x64
-		{187EC404-57B5-43CF-A0DC-6ADE090891FC}.Debug|x86.ActiveCfg = Debug|Win32
-		{187EC404-57B5-43CF-A0DC-6ADE090891FC}.Debug|x86.Build.0 = Debug|Win32
-		{187EC404-57B5-43CF-A0DC-6ADE090891FC}.Release|x64.ActiveCfg = Release|x64
-		{187EC404-57B5-43CF-A0DC-6ADE090891FC}.Release|x64.Build.0 = Release|x64
-		{187EC404-57B5-43CF-A0DC-6ADE090891FC}.Release|x86.ActiveCfg = Release|Win32
-		{187EC404-57B5-43CF-A0DC-6ADE090891FC}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {14C75139-1424-4009-B770-D50CB201D9DE}
-	EndGlobalSection
-EndGlobal
+//file: threedayre.c
+#include <stdio.h>
+
+#define ROWSIZE 4
+#define COLSIZE 2
+
+int main(void)
+{
+	int score[][ROWSIZE][COLSIZE] = {
+		{{95, 85},
+		{85, 83},
+		{92, 75},
+		{90, 88} },
+	 { {88, 77},
+		{72, 95},
+		{88, 92},
+		{93, 83} }
+	};
+	
+	
+
+	for (int i = 0; i < 2; i++)
+	{
+		if (i == 0) printf("[강좌 1");
+		else printf("[강좌 2]");
+		printf("%11s%7s\n", "중간", "기말");
+
+		for (int j = 0; j < ROWSIZE; j++)
+		{
+		printf("%10s%2d", "학생", j + 1);
+		for (int k = 0; k < COLSIZE; k++)
+			printf("%6d", score[i][j][k]);
+		printf("\n");
+}
+		printf("\n");
+	}
+	return 0;
+}
