@@ -1,31 +1,29 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch09-10", "ch09-10\ch09-10.vcxproj", "{D73E2241-71A5-4C6A-96FC-7FBF0F0F4C0B}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D73E2241-71A5-4C6A-96FC-7FBF0F0F4C0B}.Debug|x64.ActiveCfg = Debug|x64
-		{D73E2241-71A5-4C6A-96FC-7FBF0F0F4C0B}.Debug|x64.Build.0 = Debug|x64
-		{D73E2241-71A5-4C6A-96FC-7FBF0F0F4C0B}.Debug|x86.ActiveCfg = Debug|Win32
-		{D73E2241-71A5-4C6A-96FC-7FBF0F0F4C0B}.Debug|x86.Build.0 = Debug|Win32
-		{D73E2241-71A5-4C6A-96FC-7FBF0F0F4C0B}.Release|x64.ActiveCfg = Release|x64
-		{D73E2241-71A5-4C6A-96FC-7FBF0F0F4C0B}.Release|x64.Build.0 = Release|x64
-		{D73E2241-71A5-4C6A-96FC-7FBF0F0F4C0B}.Release|x86.ActiveCfg = Release|Win32
-		{D73E2241-71A5-4C6A-96FC-7FBF0F0F4C0B}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {94BAEBC8-BA09-4FA0-ADF8-D70D1C4E8662}
-	EndGlobalSection
-EndGlobal
+//file: tdaryptr.c
+
+#include <stdio.h>
+
+#define ROW 2
+#define COL 3
+
+int main(void)
+{
+	int td[][COL] = { {8, 5, 4}, {2, 7, 6} };
+
+	**td = 10;
+	*td[1] = 20;
+
+	for (int i = 0, cnt = 0; i < ROW; i++)
+	{
+		for (int j = 0; j < COL; j++, cnt++)
+		{
+			printf("%d %d %d, ", *(*td + cnt), *(td[i] + j), *(*(td + i) + j));
+		}
+		printf("\n");
+	}
+	printf("%d, %d %d\n", sizeof(td), sizeof(td[0]), sizeof(td[1]));
+	printf("%p, %p, %p\n", td, td[0],td[1]);
+	printf("%p, %p\n", &td[0][0], &td[1][0]);
+
+	return 0;
+
+}
