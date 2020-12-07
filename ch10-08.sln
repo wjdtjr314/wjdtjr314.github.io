@@ -1,31 +1,22 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch10-08", "ch10-08\ch10-08.vcxproj", "{315FEED8-BBE6-4373-B507-D2E7C43E16D2}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{315FEED8-BBE6-4373-B507-D2E7C43E16D2}.Debug|x64.ActiveCfg = Debug|x64
-		{315FEED8-BBE6-4373-B507-D2E7C43E16D2}.Debug|x64.Build.0 = Debug|x64
-		{315FEED8-BBE6-4373-B507-D2E7C43E16D2}.Debug|x86.ActiveCfg = Debug|Win32
-		{315FEED8-BBE6-4373-B507-D2E7C43E16D2}.Debug|x86.Build.0 = Debug|Win32
-		{315FEED8-BBE6-4373-B507-D2E7C43E16D2}.Release|x64.ActiveCfg = Release|x64
-		{315FEED8-BBE6-4373-B507-D2E7C43E16D2}.Release|x64.Build.0 = Release|x64
-		{315FEED8-BBE6-4373-B507-D2E7C43E16D2}.Release|x86.ActiveCfg = Release|Win32
-		{315FEED8-BBE6-4373-B507-D2E7C43E16D2}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6E07C2E8-ADC1-4F5C-9C82-8D8E4BF8ABFF}
-	EndGlobalSection
-EndGlobal
+//file: math.c
+#include <stdio.h>
+
+#include <math.h>
+
+int main(void)
+{
+	printf(" i i제곱 i세제곱 제곱급(sqrt\n");
+	printf("---------------------------------\n");
+	for (int i = 3; i < 7; i++)
+		printf("%3d %7.1f %9.1f %9.1f\n", i, pow(i, 2), pow(i, 3), sqrt(i));
+	printf("\n");
+
+	printf("exp(1.0) == %5.2f, ", exp(1.0));
+	printf("pow(2.72, 1.0) == %5.2f, ", pow(2.72, 1.0));
+	printf("sqrt(49) == %5.2f\n", sqrt(49));
+	printf("abs(-10) == %3d,", abs(-10));
+	printf("ceil(7.1) == %5.2f, ", ceil(7.1));
+	printf("floor(6.9) == %5.2f\n", floor(6.9));
+
+	return 0;
+}
