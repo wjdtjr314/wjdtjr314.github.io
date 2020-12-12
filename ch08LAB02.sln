@@ -1,21 +1,18 @@
-//file: basicpointer.c
+//file: swap.c
 #include <stdio.h>
 
 int main(void)
 {
-	char c = '@';
-	char* pc = ___;
-	int m = 100;
-	int* pm = ___;
-	double x = 5.83;
-	double* px = ___;
+	int m = 100, n = 200, dummy;
+	printf("%d %d\n", m, n);
 
-	printf("변수명 주소값  저장값\n");
-	printf("-----------------------------\n");
-	printf("%3s %12p %9c\n", "c", ___, c);
-	printf("%3s %12p %9f\n", "x", ___, x);
-	printf("%3s %12p %9f\n", "x", ___, x);
+	int* p = &m;
+	dummy = *p;
+	*p = n;
+	p = &n;
+	*p = dummy;
+
+	printf("%d %d\n", m, n);
 
 	return 0;
-
 }
