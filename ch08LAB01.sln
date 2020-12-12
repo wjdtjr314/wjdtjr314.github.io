@@ -4,17 +4,17 @@
 int main(void)
 {
 	char c = '@';
-	char* pc = ___;
+	char *pc =  &c;
 	int m = 100;
-	int* pm = ___;
+	int *pm =  &m;
 	double x = 5.83;
-	double* px = ___;
+	double* px = &x;
 
 	printf("변수명 주소값  저장값\n");
 	printf("-----------------------------\n");
-	printf("%3s %12p %9c\n", "c", ___, c);
-	printf("%3s %12p %9f\n", "x", ___, x);
-	printf("%3s %12p %9f\n", "x", ___, x);
+	printf("%3s %12p %9c\n", "c", pc, c);
+	printf("%3s %12p %9f\n", "x", pm, x);
+	printf("%3s %12p %9f\n", "x", px, x);
 
 	return 0;
 
