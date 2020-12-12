@@ -1,4 +1,4 @@
-//filr: numberguess.c
+//file: numberguess.c
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
